@@ -10,4 +10,4 @@ fi
 docker-compose up -d
 
 sleep 5s
-docker exec -it glusterfs /glusterfs/start_vol0.sh
+docker exec -it glusterfs /glusterfs/start_volume.sh
