@@ -15,4 +15,4 @@ services:
             - "24008:24008"
             - "49152:49152"
         env_file:
-            - "./.env"
+            - "./gluster.env"
