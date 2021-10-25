@@ -7,7 +7,7 @@ services:
         privileged: true
         container_name: glusterfs
         volumes:
-            - ./start_vol0.sh:/glusterfs/start_vol0.sh
+            - ./start_volume.sh:/glusterfs/start_volume.sh
             - ./volumes/data:/data # make sure your volume is as gv0 in data
             - ./volumes/logs/glusterfs:/var/log/glusterfs
         ports:
