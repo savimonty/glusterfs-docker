@@ -12,7 +12,7 @@ RUN yum makecache && \
     python-paste-deploy python-simplejson python-sphinx python-webob  \
     pyxattr readline-devel rpm-build sqlite-devel systemtap-sdt-devel \
     tar gperftools gperftools-devel lttng-ust nano glibc glibc-i18n   \
-    attr policycoreutils policycoreutils-python-utils which 
+    attr policycoreutils policycoreutils-python which 
 
 RUN mkdir urcu && \
     cd urcu && \
