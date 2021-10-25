@@ -1,6 +1,5 @@
 FROM amd64/centos:7
 
-
 WORKDIR /glusterfs-build
 
 RUN yum makecache && \
@@ -42,7 +41,9 @@ RUN mkdir src && \
     make install && \
     cd ../.. && \
     rm -rf src
-    
+
+
+RUN ldconfig
 RUN mkdir -p /glusterfs/logs
 
-CMD ["glusterd", "-N", "--log-file=/dev/stdout"]
+CMD ["glusterd", "-N", "--log-file=/glusterfs/logs/glusterfs.log"]
