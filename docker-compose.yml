@@ -7,22 +7,10 @@ services:
         privileged: true
         container_name: glusterfs
         volumes:
-        - ./volumes/data:/data
-        - ./volumes/logs:/glusterfs/logs
-version: '2'
-services:
-    glusterfs:
-        image: "glusterfs:8-${CENTOS_ARCH}"
-        build:
-            context: "./dockerfiles/${CENTOS_ARCH}"
-        privileged: true
-        container_name: glusterfs
-        volumes:
-        - ./entry.sh:/glusterfs/entry.sh
-        - ./volumes/data:/data # make sure your volume is as gv0 in data
-        - ./volumes/logs/glusterfs:/var/log/glusterfs
+            - ./start_vol0.sh:/glusterfs/start_vol0.sh
+            - ./volumes/data:/data # make sure your volume is as gv0 in data
+            - ./volumes/logs/glusterfs:/var/log/glusterfs
         ports:
-        - "24007:24007"
-        - "24008:24008"
-        - "49152:49152"
-        entrypoint: ["bash", "/glusterfs/entry.sh"]
+            - "24007:24007"
+            - "24008:24008"
+            - "49152:49152"
