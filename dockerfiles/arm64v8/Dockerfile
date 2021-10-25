@@ -37,7 +37,7 @@ RUN mkdir src && \
     rm -f contrib/userspace-rcu/rculist-extra.h.bak && \
     cat contrib/userspace-rcu/rculist-extra.h && \
     bash ./autogen.sh && \
-    bash ./configure --without-libtirpc --disable-linux-io_uring && \
+    bash ./configure --enable-gnfs --without-libtirpc --disable-linux-io_uring && \
     make && \
     make install && \
     cd ../.. && \
