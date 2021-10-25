@@ -11,7 +11,8 @@ RUN yum makecache && \
     pyliblzma python-devel python-eventlet python-netifaces           \
     python-paste-deploy python-simplejson python-sphinx python-webob  \
     pyxattr readline-devel rpm-build sqlite-devel systemtap-sdt-devel \
-    tar gperftools gperftools-devel lttng-ust nano glibc glibc-i18n
+    tar gperftools gperftools-devel lttng-ust nano glibc glibc-i18n   \
+    attr policycoreutils policycoreutils-python-utils which 
 
 RUN mkdir urcu && \
     cd urcu && \
