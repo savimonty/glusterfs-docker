@@ -6,8 +6,6 @@ glusterd -N &
 
 sleep 5
 
-yum install -y attr policycoreutils policycoreutils-python-utils which 
-
 setfattr -x trusted.glusterfs.volume-id /data/gv0
 setfattr -x trusted.gfid /data/gv0
 
