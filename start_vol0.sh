@@ -2,10 +2,6 @@
 
 set -x
 
-glusterd -N &
-
-sleep 5
-
 setfattr -x trusted.glusterfs.volume-id /data/gv0
 setfattr -x trusted.gfid /data/gv0
 

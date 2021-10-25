@@ -8,3 +8,6 @@ elif [[ "${ARCH}" == "aarch64" ]]; then
 fi
 
 docker-compose up -d
+
+sleep 5s
+docker exec -it glusterfs /glusterfs/start_vol0.sh

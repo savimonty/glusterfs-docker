@@ -47,4 +47,4 @@ RUN mkdir src && \
 RUN ldconfig
 RUN mkdir -p /glusterfs/logs
 
-CMD ["glusterd", "-N", "--log-file=/glusterfs/logs/glusterfs.log"]
+ENTRYPOINT ["glusterd", "-N"]
